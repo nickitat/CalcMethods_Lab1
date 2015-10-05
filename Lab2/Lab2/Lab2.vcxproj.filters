@@ -24,7 +24,7 @@
     <ClCompile Include="matrix.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="calculation.cpp">
+    <ClCompile Include="matrix_calculation.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
@@ -33,6 +33,9 @@
       <Filter>Заголовочные файлы\MyUtility</Filter>
     </ClInclude>
     <ClInclude Include="calculation.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix_calculation.h">
       <Filter>Заголовочные файлы\MyUtility</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,7 +4,7 @@
 
 namespace Garbage {
 
-	vector<matrix::_Type> calculation::SLAE::back_substitution(const matrix& U, const vector<matrix::_Type>& b) {
+	vector<matrix::_Type> matrix_calculation::SLAE::back_substitution(const matrix& U, const vector<matrix::_Type>& b) {
 		vector<matrix::_Type> x(U.columns());
 		for (int i = x.size() - 1; i >= 0; --i) {
 			x[i] = b[i];
@@ -16,7 +16,7 @@ namespace Garbage {
 		return x;
 	}
 
-	vector<matrix::_Type> calculation::SLAE::straight_substitution(const matrix& L, const vector<matrix::_Type>& b) {
+	vector<matrix::_Type> matrix_calculation::SLAE::straight_substitution(const matrix& L, const vector<matrix::_Type>& b) {
 		vector<matrix::_Type> x(L.columns());
 		for (int i = 0; i < x.size(); ++i) {
 			x[i] = b[i];
@@ -28,7 +28,7 @@ namespace Garbage {
 		return x;
 	}
 
-	matrix calculation::SLAE::LU_method(const matrix& A, const matrix& b) {
+	matrix matrix_calculation::SLAE::LU_method(const matrix& A, const matrix& b) {
 		matrix LU = A.LU_decomposition();
 		matrix L(LU.rows(), LU.columns()), U(LU.rows(), LU.columns());
 		for (int i = 0; i < LU.rows(); ++i) {
@@ -55,7 +55,7 @@ namespace Garbage {
 		return X;
 	}
 
-	matrix calculation::SLAE::QR_method(const matrix& A, const matrix& b) {
+	matrix matrix_calculation::SLAE::QR_method(const matrix& A, const matrix& b) {
 		//if (A.rows != A.columns) {
 		//
 		//}
@@ -82,7 +82,7 @@ namespace Garbage {
 		return X;
 	}
 
-	matrix calculation::inverse_matrix::LU_method(const matrix& A) {
+	matrix matrix_calculation::inverse_matrix::LU_method(const matrix& A) {
 		//if (A.rows != A.columns) {
 		//
 		//}
@@ -94,7 +94,7 @@ namespace Garbage {
 		return A_inverse;
 	}
 
-	matrix calculation::inverse_matrix::QR_method(const matrix& A) {
+	matrix matrix_calculation::inverse_matrix::QR_method(const matrix& A) {
 		//if (A.rows != A.columns) {
 		//
 		//}

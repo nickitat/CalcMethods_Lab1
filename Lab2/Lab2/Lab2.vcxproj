@@ -64,11 +64,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="calculation.cpp" />
+    <ClCompile Include="matrix_calculation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="matrix.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="matrix_calculation.h" />
     <ClInclude Include="calculation.h" />
     <ClInclude Include="matrix.h" />
   </ItemGroup>
