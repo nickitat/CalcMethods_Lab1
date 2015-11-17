@@ -22,14 +22,14 @@ double mu(double x) {
 }
 
 double u(double x, double t) {
-	return -x*x*x*x + x*x*x + t*x + t*t - t*exp(x);
+	return -(x*x*x*x) + x*x*x + t*x + t*t - t*exp(x);
 }
 
 int main() {
 	freopen("output.txt", "w", stdout);
 	double a = 0.022;
-	int N = 20;
-	int Nt = 20;
+	int N = 10;
+	int Nt = 100;
 	Calculation calc(a, f, u, mu, N, Nt);
 	calc.calculate();
 	return 0;
